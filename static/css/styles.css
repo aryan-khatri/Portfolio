@@ -6,14 +6,18 @@
 
 /* ===== Base Styles ===== */
 :root {
-  --primary-color: #0d6efd;
-  --secondary-color: #6c757d;
+  --primary-color: #5e72e4;
+  --secondary-color: #8898aa;
   --dark-color: #212529;
   --light-color: #f8f9fa;
-  --success-color: #198754;
-  --info-color: #0dcaf0;
-  --warning-color: #ffc107;
-  --danger-color: #dc3545;
+  --success-color: #2dce89;
+  --info-color: #11cdef;
+  --warning-color: #fb6340;
+  --danger-color: #f5365c;
+  --accent-color: #7764e4;
+  --github-color: #333;
+  --cert-color: #fb6340;
+  --skill-color: #5e72e4;
   --transition: all 0.3s ease;
 }
 
@@ -185,31 +189,114 @@ section {
 }
 
 /* ===== Skills Section ===== */
-.progress {
-  height: 10px;
-  border-radius: 5px;
-  background-color: #424450;
-  margin-bottom: 10px;
+.skills-section {
+  background: linear-gradient(to right, rgba(30, 30, 46, 0.95), rgba(40, 40, 61, 0.95));
+  position: relative;
+  overflow: hidden;
+  padding: 100px 0;
 }
 
-.progress-bar {
-  background-color: var(--primary-color);
-  border-radius: 5px;
+.skills-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://source.unsplash.com/random/1920x1080/?code') center/cover no-repeat;
+  opacity: 0.1;
+  z-index: -1;
+}
+
+.skills-card {
+  background-color: rgba(42, 45, 62, 0.85);
+  border-radius: 10px;
+  padding: 25px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transition: var(--transition);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.skills-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  border-color: var(--skill-color);
+}
+
+.skills-card-header {
+  text-align: center;
+  margin-bottom: 20px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.skills-card-body {
+  flex: 1;
+}
+
+.skills-icon {
+  color: var(--skill-color);
+  margin-bottom: 15px;
+}
+
+.progress {
+  height: 10px;
+  border-radius: 50px;
+  background-color: rgba(255, 255, 255, 0.1);
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+.progress-bar.skill-progress {
+  background: linear-gradient(to right, var(--skill-color), var(--accent-color));
+  border-radius: 50px;
+  position: relative;
+  transition: width 1.5s ease-in-out;
 }
 
 .skill-item h6 {
-  font-weight: 500;
+  font-weight: 600;
+  font-size: 1rem;
 }
 
 .skill-list li {
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   display: flex;
   align-items: center;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.skill-list li:last-child {
+  border-bottom: none;
 }
 
 .skill-list li i {
-  color: var(--primary-color);
-  margin-right: 10px;
+  color: var(--skill-color);
+  margin-right: 15px;
+  font-size: 1.1rem;
+}
+
+.github-callout {
+  background: linear-gradient(to right, #2f3640, #353b48);
+  border-radius: 10px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: var(--transition);
+}
+
+.github-callout:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+  border-color: var(--github-color);
+}
+
+.github-callout i {
+  color: #fff;
 }
 
 /* ===== Projects Section ===== */
@@ -243,22 +330,107 @@ section {
 }
 
 /* ===== Certifications Section ===== */
+.certifications-section {
+  background: linear-gradient(135deg, #1f2335, #2d3047);
+  position: relative;
+  padding: 100px 0;
+  overflow: hidden;
+}
+
+.certifications-section::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url('https://source.unsplash.com/random/1920x1080/?certificate') center/cover no-repeat;
+  opacity: 0.05;
+  z-index: -1;
+}
+
 .certification-card {
   transition: var(--transition);
-  border: none;
-  background-color: #2A2D3E;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  background-color: rgba(45, 48, 71, 0.7);
   text-align: center;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  height: 100%;
+  position: relative;
 }
 
 .certification-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  border-color: var(--cert-color);
 }
 
 .cert-icon {
   font-size: 2.5rem;
-  color: var(--warning-color);
+  color: var(--cert-color);
+  margin: 20px 0;
+  position: relative;
+  z-index: 1;
+}
+
+.cert-icon::after {
+  content: '';
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  background-color: rgba(251, 99, 64, 0.1);
+  border-radius: 50%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+}
+
+.certification-badge {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background-color: var(--cert-color);
+  color: white;
+  font-size: 0.7rem;
+  padding: 3px 10px;
+  border-radius: 15px;
+  text-transform: uppercase;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+}
+
+.certification-card .card-title {
+  font-weight: 600;
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.certification-card .card-text {
+  margin-bottom: 20px;
+  font-size: 0.9rem;
+  color: var(--secondary-color);
+}
+
+.certificate-link {
+  display: inline-block;
+  margin-top: 15px;
+  color: var(--cert-color);
+  font-weight: 500;
+  transition: var(--transition);
+}
+
+.certificate-link:hover {
+  color: white;
+}
+
+.cert-date {
+  font-size: 0.85rem;
+  color: var(--secondary-color);
   margin-bottom: 15px;
+  display: block;
 }
 
 /* ===== Contact Section ===== */
