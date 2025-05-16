@@ -551,13 +551,12 @@
     </section>
 
     <!-- Certifications Section -->
-    <section id="certifications" class="py-5 certifications-section">
+    <section id="certifications" class="py-5 bg-light">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center mb-5">
-                    <h2 class="section-title text-white">Professional Certifications</h2>
+                    <h2 class="section-title">Certifications</h2>
                     <div class="section-divider"></div>
-                    <p class="lead text-white mb-5">Recognized accomplishments and specialized training</p>
                 </div>
             </div>
             <div class="row">
