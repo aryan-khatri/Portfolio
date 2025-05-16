@@ -1,0 +1,404 @@
+/* 
+  Main Stylesheet for Developer Portfolio
+  Author: Your Name
+  Description: Custom styles for the developer portfolio website
+*/
+
+/* ===== Base Styles ===== */
+:root {
+  --primary-color: #0d6efd;
+  --secondary-color: #6c757d;
+  --dark-color: #212529;
+  --light-color: #f8f9fa;
+  --success-color: #198754;
+  --info-color: #0dcaf0;
+  --warning-color: #ffc107;
+  --danger-color: #dc3545;
+  --transition: all 0.3s ease;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  line-height: 1.6;
+  scroll-behavior: smooth;
+  padding-top: 56px; /* Account for fixed navbar */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 600;
+}
+
+a {
+  text-decoration: none;
+  transition: var(--transition);
+}
+
+/* ===== Section Styles ===== */
+section {
+  padding: 80px 0;
+}
+
+.section-title {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 15px;
+  position: relative;
+}
+
+.section-divider {
+  height: 4px;
+  width: 70px;
+  background-color: var(--primary-color);
+  margin: 0 auto 30px;
+  border-radius: 2px;
+}
+
+/* ===== Hero Section ===== */
+.hero-section {
+  height: 100vh;
+  background: linear-gradient(rgba(33, 37, 41, 0.7), rgba(33, 37, 41, 0.9)), url('https://source.unsplash.com/random/1920x1080/?code');
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  font-weight: 300;
+  margin-bottom: 30px;
+}
+
+/* ===== About Section ===== */
+.profile-img-container {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.social-links {
+  display: flex;
+  gap: 15px;
+}
+
+.social-icon {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #2A2D3E;
+  color: #fff;
+  transition: var(--transition);
+}
+
+.social-icon:hover {
+  background-color: var(--primary-color);
+  transform: translateY(-3px);
+}
+
+.about-details p {
+  margin-bottom: 8px;
+}
+
+/* ===== Experience & Education Sections ===== */
+.timeline {
+  position: relative;
+  padding: 20px 0;
+}
+
+.timeline:before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 100%;
+  background-color: var(--secondary-color);
+}
+
+.timeline-item {
+  margin-bottom: 50px;
+  position: relative;
+}
+
+.timeline-badge {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: var(--primary-color);
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  z-index: 1;
+}
+
+.timeline-badge.education {
+  background-color: var(--success-color);
+}
+
+.timeline-panel {
+  width: 45%;
+  background-color: #2A2D3E;
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  position: relative;
+  margin-left: auto;
+}
+
+.timeline-item:nth-child(even) .timeline-panel {
+  margin-left: 0;
+  margin-right: auto;
+}
+
+.timeline-heading h4 {
+  margin-top: 0;
+  color: #fff;
+}
+
+.timeline-heading h5 {
+  color: var(--primary-color);
+  margin-bottom: 10px;
+}
+
+.timeline-list {
+  padding-left: 20px;
+  margin-top: 10px;
+}
+
+.timeline-list li {
+  margin-bottom: 5px;
+}
+
+/* ===== Skills Section ===== */
+.progress {
+  height: 10px;
+  border-radius: 5px;
+  background-color: #424450;
+  margin-bottom: 10px;
+}
+
+.progress-bar {
+  background-color: var(--primary-color);
+  border-radius: 5px;
+}
+
+.skill-item h6 {
+  font-weight: 500;
+}
+
+.skill-list li {
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+}
+
+.skill-list li i {
+  color: var(--primary-color);
+  margin-right: 10px;
+}
+
+/* ===== Projects Section ===== */
+.project-card {
+  transition: var(--transition);
+  border: none;
+  background-color: #2A2D3E;
+  overflow: hidden;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+}
+
+.tech-stack {
+  margin-top: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.card-footer {
+  background-color: transparent;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ===== Certifications Section ===== */
+.certification-card {
+  transition: var(--transition);
+  border: none;
+  background-color: #2A2D3E;
+  text-align: center;
+}
+
+.certification-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.cert-icon {
+  font-size: 2.5rem;
+  color: var(--warning-color);
+  margin-bottom: 15px;
+}
+
+/* ===== Contact Section ===== */
+.contact-card {
+  border: none;
+  background-color: #2A2D3E;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info {
+  margin-bottom: 30px;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.contact-item i {
+  width: 30px;
+  color: var(--primary-color);
+  font-size: 1.2rem;
+}
+
+.form-control {
+  background-color: #363a4f;
+  border: none;
+  color: #fff;
+  padding: 12px 15px;
+  border-radius: 5px;
+}
+
+.form-control:focus {
+  background-color: #363a4f;
+  color: #fff;
+  box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.25);
+}
+
+/* ===== Footer ===== */
+.footer {
+  background-color: #1a1c24;
+}
+
+.footer-links {
+  margin-top: 15px;
+}
+
+.footer-links a {
+  transition: var(--transition);
+}
+
+.footer-links a:hover {
+  color: var(--primary-color) !important;
+}
+
+/* ===== Back to Top Button ===== */
+.back-to-top {
+  position: fixed;
+  width: 40px;
+  height: 40px;
+  background-color: var(--primary-color);
+  border-radius: 50%;
+  right: 15px;
+  bottom: 15px;
+  color: #fff;
+  transition: var(--transition);
+  opacity: 0;
+  visibility: hidden;
+  z-index: 9999;
+}
+
+.back-to-top.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.back-to-top:hover {
+  background-color: var(--dark-color);
+  color: #fff;
+}
+
+/* ===== Responsive Styles ===== */
+@media (max-width: 991.98px) {
+  .timeline:before {
+    left: 30px;
+  }
+  
+  .timeline-badge {
+    left: 30px;
+  }
+  
+  .timeline-panel {
+    width: calc(100% - 90px);
+    margin-left: 90px;
+  }
+  
+  .timeline-item:nth-child(even) .timeline-panel {
+    margin-left: 90px;
+    margin-right: 0;
+  }
+  
+  .hero-title {
+    font-size: 2.8rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 767.98px) {
+  section {
+    padding: 60px 0;
+  }
+  
+  .section-title {
+    font-size: 2rem;
+  }
+  
+  .hero-title {
+    font-size: 2.2rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 1.1rem;
+  }
+
+  .contact-info {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero-title {
+    font-size: 1.8rem;
+  }
+  
+  .section-title {
+    font-size: 1.8rem;
+  }
+}
