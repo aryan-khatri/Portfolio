@@ -18,6 +18,9 @@
   --github-color: #333;
   --cert-color: #fb6340;
   --skill-color: #5e72e4;
+  --bg-color: #1a1c2a;
+  --card-bg-color: #252a41;
+  --section-bg-color: #2a2e45;
   --transition: all 0.3s ease;
 }
 
@@ -26,6 +29,8 @@ body {
   line-height: 1.6;
   scroll-behavior: smooth;
   padding-top: 56px; /* Account for fixed navbar */
+  background-color: var(--bg-color);
+  color: var(--light-color);
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -40,6 +45,11 @@ a {
 /* ===== Section Styles ===== */
 section {
   padding: 80px 0;
+  background-color: var(--section-bg-color);
+}
+
+section:nth-child(even) {
+  background-color: var(--bg-color);
 }
 
 .section-title {
@@ -47,6 +57,7 @@ section {
   font-weight: 700;
   margin-bottom: 15px;
   position: relative;
+  color: var(--light-color);
 }
 
 .section-divider {
@@ -438,14 +449,16 @@ section {
 /* ===== Projects Section ===== */
 .project-card {
   transition: var(--transition);
-  border: none;
-  background-color: #2A2D3E;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  background-color: var(--card-bg-color);
   overflow: hidden;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
 }
 
 .project-card:hover {
   transform: translateY(-10px);
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+  border-color: var(--primary-color);
 }
 
 .card-img-top {
@@ -461,8 +474,14 @@ section {
 }
 
 .card-footer {
-  background-color: transparent;
-  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  background-color: rgba(26, 28, 42, 0.5);
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.card {
+  background-color: var(--card-bg-color);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  color: var(--light-color);
 }
 
 /* ===== Certifications Section ===== */
@@ -574,10 +593,17 @@ section {
 
 /* ===== Contact Section ===== */
 .contact-card {
-  border: none;
-  background-color: #2A2D3E;
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  background-color: var(--card-bg-color);
   border-radius: 10px;
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  transition: var(--transition);
+}
+
+.contact-card:hover {
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
+  border-color: var(--primary-color);
+  transform: translateY(-5px);
 }
 
 .contact-info {
@@ -597,22 +623,26 @@ section {
 }
 
 .form-control {
-  background-color: #363a4f;
-  border: none;
+  background-color: rgba(54, 58, 79, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
   color: #fff;
   padding: 12px 15px;
   border-radius: 5px;
+  transition: var(--transition);
 }
 
 .form-control:focus {
-  background-color: #363a4f;
+  background-color: rgba(54, 58, 79, 0.9);
   color: #fff;
-  box-shadow: 0 0 0 3px rgba(13, 110, 253, 0.25);
+  box-shadow: 0 0 0 3px rgba(94, 114, 228, 0.25);
+  border-color: var(--primary-color);
 }
 
 /* ===== Footer ===== */
 .footer {
-  background-color: #1a1c24;
+  background-color: rgba(20, 21, 33, 0.98);
+  border-top: 1px solid rgba(94, 114, 228, 0.1);
+  box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.15);
 }
 
 .footer-links {
