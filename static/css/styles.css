@@ -9,7 +9,9 @@
   --primary-color: #5e72e4;
   --secondary-color: #8898aa;
   --dark-color: #212529;
-  --light-color: #f8f9fa;
+  --light-color: #ffffff;
+  --text-color: #e6e9f0;
+  --muted-text-color: #b0b6c8;
   --success-color: #2dce89;
   --info-color: #11cdef;
   --warning-color: #fb6340;
@@ -30,22 +32,45 @@ body {
   scroll-behavior: smooth;
   padding-top: 56px; /* Account for fixed navbar */
   background-color: var(--bg-color);
-  color: var(--light-color);
+  color: var(--text-color);
 }
 
 h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
+  color: var(--light-color);
 }
 
 a {
   text-decoration: none;
   transition: var(--transition);
+  color: var(--primary-color);
+}
+
+a:hover {
+  color: var(--accent-color);
+  text-decoration: none;
 }
 
 /* ===== Section Styles ===== */
 section {
   padding: 80px 0;
   background-color: var(--section-bg-color);
+}
+
+.lead {
+  font-size: 1.25rem;
+  font-weight: 300;
+  color: var(--text-color);
+}
+
+.btn-primary {
+  background-color: var(--primary-color);
+  border-color: var(--primary-color);
+}
+
+.btn-primary:hover {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
 }
 
 section:nth-child(even) {
@@ -58,6 +83,7 @@ section:nth-child(even) {
   margin-bottom: 15px;
   position: relative;
   color: var(--light-color);
+  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
 }
 
 .section-divider {
@@ -481,7 +507,20 @@ section:nth-child(even) {
 .card {
   background-color: var(--card-bg-color);
   border: 1px solid rgba(255, 255, 255, 0.05);
+  color: var(--text-color);
+}
+
+.card-title {
   color: var(--light-color);
+  font-weight: 600;
+}
+
+.card-text {
+  color: var(--text-color);
+}
+
+.text-muted {
+  color: var(--muted-text-color) !important;
 }
 
 /* ===== Certifications Section ===== */
