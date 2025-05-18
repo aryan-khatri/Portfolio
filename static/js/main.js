@@ -1,8 +1,9 @@
-/**
- * Main JavaScript for Developer Portfolio
- * Author: Your Name
- * Description: Handles animations, form submission, and other interactive elements
- */
+/* 
+  Animations Stylesheet for Developer Portfolio © Aryan Khatri
+  Author: Aryan Khatri
+  Description: Custom animations for enhanced user experience
+  Every section of the code is thoroughly commented for easy understanding, enabling anyone to clone, learn from, and reuse the project confidently.
+*/
 
 // Set current year in footer
 document.getElementById('currentYear').innerText = new Date().getFullYear();

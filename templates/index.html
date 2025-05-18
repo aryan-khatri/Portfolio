@@ -1,25 +1,35 @@
 <!DOCTYPE html>
 <html lang="en" data-bs-theme="dark">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Developer Portfolio</title>
+    <title>Aryan Khatri | Portfolio</title>
+
+    <!-- Favicon -->
+    <link rel="apple-touch-icon" sizes="180x180" href="{{ url_for('static', filename='favicon_io/apple-touch-icon.png') }}">
+    <link rel="icon" type="image/png" sizes="32x32" href="{{ url_for('static', filename='favicon_io/favicon-32x32.png') }}">
+    <link rel="icon" type="image/png" sizes="16x16" href="{{ url_for('static', filename='favicon_io/favicon-16x16.png') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='favicon_io/favicon.ico') }}">
     <!-- Bootstrap CSS -->
     <link href="https://cdn.replit.com/agent/bootstrap-agent-dark-theme.min.css" rel="stylesheet">
     <!-- Font Awesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" href="{{ url_for('static', filename='css/styles.css') }}">
     <link rel="stylesheet" href="{{ url_for('static', filename='css/animations.css') }}">
 </head>
 <body>
     <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark fixed-top" style="background: linear-gradient(to right, rgba(30, 30, 46, 0.97), rgba(40, 40, 61, 0.97));">
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top"
+        style="background: linear-gradient(to right, rgba(30, 30, 46, 0.97), rgba(40, 40, 61, 0.97));">
         <div class="container">
-            <a class="navbar-brand" href="#">Developer Portfolio</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <a class="navbar-brand" href="#">Portfolio</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -35,11 +45,6 @@
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#skills">Skills</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#github">
-                            <i class="fab fa-github me-1"></i>GitHub
-                        </a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="#projects">Projects</a>
@@ -60,8 +65,9 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
-                    <h1 class="hero-title fade-in">Software Developer</h1>
+                    <h1 class="hero-title fade-in">Web Developer | Cyber Enthusiast</h1>
                     <p class="hero-subtitle slide-up">Building innovative solutions with clean, efficient code</p>
+                    <p class="hero-subtitle slide-up">aryan khatri</p>
                     <a href="#about" class="btn btn-outline-light btn-lg mt-4 bounce">Learn More</a>
                 </div>
             </div>
@@ -80,33 +86,48 @@
             <div class="row align-items-center">
                 <div class="col-md-4 mb-4 mb-md-0">
                     <div class="profile-img-container">
-                        <!-- SVG placeholder for profile image -->
-                        <svg class="img-fluid rounded-circle" width="250" height="250" xmlns="http://www.w3.org/2000/svg">
-                            <rect width="250" height="250" fill="#2A2D3E"/>
-                            <text x="50%" y="50%" font-size="20" text-anchor="middle" fill="#ffffff" dy=".3em">Profile Photo</text>
-                        </svg>
+                        <!-- IMG placeholder for profile image -->
+                        <img src="{{ url_for('static', filename='photo.jpeg') }}" alt="Profile Photo"
+                            class="img-fluid rounded-circle" width="250" height="250" style="object-fit: cover;" />
                     </div>
                 </div>
                 <div class="col-md-8">
-                    <h3>Your Name</h3>
-                    <p class="lead">Full Stack Developer</p>
-                    <p>I am a passionate software developer with expertise in building responsive web applications. With a strong foundation in both frontend and backend technologies, I strive to create clean, efficient, and scalable solutions. I enjoy tackling complex problems and continuously learning new technologies to enhance my skill set.</p>
+                    <h3>Aryan Khatri</h3>
+                    <p class="lead">Full Stack Developer | Cyber Security Enthusiast</p>
+                    <p style="text-align: justify;">I am a pre-final year Integrated M.Tech student at VIT Bhopal,
+                        specializing in Cyber Security and Digital Forensics. I am proficient in Java, C++, and C, with
+                        hands-on experience using Git and GitHub for collaborative development. I am also familiar with
+                        the MERN stack and have a strong interest in exploring security tools and technologies to
+                        address real-world cyber challenges.
+
+                        As a passionate software developer, I have expertise in building responsive web applications.
+                        With a solid foundation in both frontend and backend technologies, I strive to create clean,
+                        efficient, and scalable solutions. I enjoy solving complex problems and am committed to
+                        continuously learning new technologies to expand my skill set.</p>
                     <div class="about-details">
                         <div class="row">
                             <div class="col-md-6">
-                                <p><strong><i class="fas fa-map-marker-alt"></i> Location:</strong> City, Country</p>
-                                <p><strong><i class="fas fa-envelope"></i> Email:</strong> your.email@example.com</p>
+                                <p><strong><i class="fas fa-map-marker-alt"></i> Subhash Nagar:</strong> Madhya Pradesh,
+                                    India</p>
+                                <p><strong><i class="fas fa-envelope"></i> Email:</strong> aryankhatik721@gmail.com</p>
                             </div>
                             <div class="col-md-6">
-                                <p><strong><i class="fas fa-phone"></i> Phone:</strong> +1 234 567 890</p>
-                                <p><strong><i class="fas fa-globe"></i> Website:</strong> www.yourwebsite.com</p>
+                                <p><strong><i class="fas fa-phone"></i> Phone:</strong> +91 9301382870</p>
+                                <p><strong><i class="fas fa-globe"></i> Resume:</strong>
+                                    <a href="https://aryan-khatri.github.io/resume.github.io/"
+                                        target="_blank">www.resume.io</a>
+                                </p>
                             </div>
                         </div>
                     </div>
                     <div class="social-links mt-4">
-                        <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
+                        <a href="https://github.com/aryan-khatri" class="social-icon"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/aryan-khatri-8587b3251/" class="social-icon"><i
+                                class="fab fa-linkedin"></i></a>
+                        <a href="https://x.com/aryankhatri721?s=21" class="social-icon"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/aryankhatri722?igsh=cnN0d2prMjk3dXln&utm_source=qr"
+                            class="social-icon"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
@@ -125,6 +146,7 @@
             <div class="row">
                 <div class="col-lg-12">
                     <div class="timeline">
+
                         <!-- Experience Item 1 -->
                         <div class="timeline-item">
                             <div class="timeline-badge">
@@ -132,21 +154,32 @@
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h4>Senior Software Developer</h4>
-                                    <h5>Company Name</h5>
-                                    <p class="text-muted"><i class="fas fa-calendar-alt"></i> January 2020 - Present</p>
+                                    <h4>Full Stack Developer</h4>
+                                    <h5>Prodigy </h5>
+                                    <p class="text-muted"><i class="fas fa-calendar-alt"></i> December 2024 - January
+                                        2025</p>
                                 </div>
                                 <div class="timeline-body">
-                                    <p>Led the development of a microservices architecture using Node.js and React. Collaborated with cross-functional teams to deliver high-quality software solutions. Mentored junior developers and implemented CI/CD pipelines.</p>
-                                    <ul class="timeline-list">
-                                        <li>Reduced application load time by 40% through performance optimization</li>
-                                        <li>Implemented automated testing, achieving 85% code coverage</li>
-                                        <li>Designed and developed RESTful APIs used by multiple client applications</li>
+                                    <p style="text-align: justify;"> I focused on enhancing platform security and user
+                                        experience. This involved implementing secure user authentication using JWT
+                                        (JSON Web Tokens) and access control, specifically implementing JWT-based
+                                        authentication and session management to protect user data and enforce access
+                                        control. Additionally, I optimized MySQL queries and integrated Bootstrap to
+                                        create a responsive, high-performance front-end interface. My work also included
+                                        designing modular components and reusable UI elements, which helped to
+                                        accelerate development and ensure consistency across the web platform.</p>
+                                    <ul class="timeline-list" style="text-align: justify;">
+                                        <li>Implemented secure user authentication using JWT and access control,
+                                            enhancing platform security, user experience.</li>
+                                        <li>Implemented JWT-based authentication and session management to secure user
+                                            data and enforce access control.</li>
+                                        <li>Optimized MySQL queries and integrated Bootstrap for a responsive,
+                                            high-performance front-end interface.</li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- Experience Item 2 -->
                         <div class="timeline-item">
                             <div class="timeline-badge">
@@ -154,23 +187,37 @@
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h4>Software Developer</h4>
-                                    <h5>Previous Company</h5>
-                                    <p class="text-muted"><i class="fas fa-calendar-alt"></i> June 2017 - December 2019</p>
+                                    <h4>Full Stack Developer</h4>
+                                    <h5>Quintus Pvt.Ltd</h5>
+                                    <p class="text-muted"><i class="fas fa-calendar-alt"></i> September 2024 - December
+                                        2024</p>
                                 </div>
                                 <div class="timeline-body">
-                                    <p>Developed and maintained web applications using JavaScript, HTML, and CSS. Collaborated with the UX team to implement responsive designs and improve user experience.</p>
-                                    <ul class="timeline-list">
-                                        <li>Designed and implemented the company's customer portal</li>
-                                        <li>Integrated third-party payment gateways and implemented security best practices</li>
-                                        <li>Created reusable component libraries to speed up development</li>
+                                    <p style="text-align: justify;">I worked with technologies such as HTML, CSS,
+                                        JavaScript, Java, RESTful APIs, and Git & GitHub, I was responsible for
+                                        implementing a complete full-stack e-commerce web application, emphasizing user
+                                        interface and performance. I also integrated secure user authentication and
+                                        built dynamic product management capabilities. My role involved ensuring high
+                                        coding standards and incorporating third-party APIs to add more features and
+                                        functionality to the website. Additionally, I improved order processing
+                                        efficiency by designing a modular and scalable backend architecture to better
+                                        the user experience.</p>
+                                    <ul class="timeline-list" style="text-align: justify;">
+                                        <li>Implement a fully functional full-stack e-commerce web application with a
+                                            focus on user interface, fast performance.</li>
+                                        <li>Integrated secure user authentication mechanisms, implemented dynamic
+                                            product management features.</li>
+                                        <li>Ensure high-quality coding standards and integrate third-party APIs for
+                                            enhanced website features and functionality.</li>
                                     </ul>
                                 </div>
                             </div>
                         </div>
-                        
+
+
+
                         <!-- Experience Item 3 -->
-                        <div class="timeline-item">
+                        <!-- <div class="timeline-item">
                             <div class="timeline-badge">
                                 <i class="fas fa-briefcase"></i>
                             </div>
@@ -189,7 +236,7 @@
                                     </ul>
                                 </div>
                             </div>
-                        </div>
+                        </div> -->
                     </div>
                 </div>
             </div>
@@ -215,17 +262,29 @@
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h4>Master of Science in Computer Science</h4>
-                                    <h5>University Name</h5>
-                                    <p class="text-muted"><i class="fas fa-calendar-alt"></i> 2013 - 2015</p>
+                                    <h4>Integrated M.Tech in Computer Science and Engineering</h4>
+                                    <h5>VIT Bhopal</h5>
+                                    <p class="text-muted"><i class="fas fa-calendar-alt"></i> 2021 - 2026</p>
                                 </div>
-                                <div class="timeline-body">
-                                    <p>Specialized in Software Engineering and Machine Learning. Completed thesis on "Optimization Techniques for Deep Learning Models".</p>
-                                    <p><strong>Key Courses:</strong> Advanced Algorithms, Machine Learning, Distributed Systems, Database Management</p>
+                                <div class="timeline-body" style="text-align: justify;">
+                                    <p>I am a Pre-Final Year student pursuing an Integrated M.Tech in Computer Science
+                                        and Engineering at VIT Bhopal, with a specialization in Cyber Security and
+                                        Digital Forensics. Throughout my academic journey, I have developed a strong
+                                        foundation in programming languages such as Java, C++, and C, along with
+                                        hands-on experience using Git and GitHub for version control and collaborative
+                                        development. I am well-versed with the MERN Stack and have a growing interest in
+                                        exploring cutting-edge cybersecurity tools and technologies aimed at solving
+                                        real-world digital threats. My coursework has included Full Stack Development
+                                        and Ethical Hacking, which has further deepened my understanding of both
+                                        front-end and back-end systems as well as the principles of secure software
+                                        development. I am passionate about building secure, scalable, and efficient
+                                        applications, and continuously strive to expand my technical expertise in the
+                                        evolving field of cybersecurity.</p>
+                                    <p><strong>Key Courses:</strong> Full Stack and Ethical Hacking</p>
                                 </div>
                             </div>
                         </div>
-                        
+
                         <!-- Education Item 2 -->
                         <div class="timeline-item">
                             <div class="timeline-badge education">
@@ -233,13 +292,22 @@
                             </div>
                             <div class="timeline-panel">
                                 <div class="timeline-heading">
-                                    <h4>Bachelor of Science in Computer Engineering</h4>
-                                    <h5>University Name</h5>
-                                    <p class="text-muted"><i class="fas fa-calendar-alt"></i> 2009 - 2013</p>
+                                    <h4> Secondary (Class X) - Senior Secondary (Class XII)</h4>
+                                    <h5>Talent Innovative School, MP Board</h5>
+                                    <p class="text-muted"><i class="fas fa-calendar-alt"></i> 2019 - 2021</p>
                                 </div>
-                                <div class="timeline-body">
-                                    <p>Graduated with honors. Participated in multiple hackathons and coding competitions.</p>
-                                    <p><strong>Key Courses:</strong> Data Structures, Object-Oriented Programming, Computer Networks, Web Development</p>
+                                <div class="timeline-body" style="text-align: justify;">
+                                    <p>I completed my Secondary Education (Class X) in 2019 from Talent Innovative
+                                        School, affiliated with the MP Board, securing a percentage of 72.4% with a
+                                        focus on core subjects. Subsequently, I pursued my Senior Secondary Education
+                                        (Class XII) in the Science stream (Physics, Chemistry, and Mathematics) from the
+                                        same institution and graduated in 2021 with a score of 77.6%.
+
+                                        These academic foundations have equipped me with strong analytical and
+                                        problem-solving skills, which I continue to build upon in my current studies. My
+                                        consistent academic performance reflects my dedication and ability to adapt and
+                                        grow in challenging environments.</p>
+                                    <p><strong>Key Courses:</strong> Mathematics</p>
                                 </div>
                             </div>
                         </div>
@@ -249,7 +317,7 @@
         </div>
     </section>
 
-    <!-- Skills Section -->
+    <!-- Technical Skills Section -->
     <section id="skills" class="py-5 skills-section">
         <div class="container">
             <div class="row">
@@ -263,67 +331,109 @@
                 <!-- Technical Skills -->
                 <div class="col-md-6 mb-4">
                     <h3 class="mb-4">Technical Skills</h3>
-                    
-                    <!-- Skill Item -->
-                    <div class="skill-item mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="mb-2">JavaScript/TypeScript</h6>
-                            <span>90%</span>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    
-                    <!-- Skill Item -->
+
+                    <!-- Skill Items (All inside this col-md-6) -->
+
                     <div class="skill-item mb-4">
                         <div class="d-flex justify-content-between">
                             <h6 class="mb-2">HTML5/CSS3</h6>
                             <span>95%</span>
                         </div>
                         <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar" role="progressbar" style="width: 95%;" aria-valuenow="95"
+                                aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                     </div>
-                    
-                    <!-- Skill Item -->
+
+
                     <div class="skill-item mb-4">
                         <div class="d-flex justify-content-between">
-                            <h6 class="mb-2">React/Angular</h6>
-                            <span>85%</span>
+                            <h6 class="mb-2">JavaScript/TypeScript</h6>
+                            <span>90%</span>
                         </div>
                         <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 85%;" aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90"
+                                aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                     </div>
-                    
-                    <!-- Skill Item -->
+
+
                     <div class="skill-item mb-4">
                         <div class="d-flex justify-content-between">
-                            <h6 class="mb-2">Node.js/Express</h6>
-                            <span>80%</span>
-                        </div>
-                        <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 80%;" aria-valuenow="80" aria-valuemin="0" aria-valuemax="100"></div>
-                        </div>
-                    </div>
-                    
-                    <!-- Skill Item -->
-                    <div class="skill-item mb-4">
-                        <div class="d-flex justify-content-between">
-                            <h6 class="mb-2">Python/Django</h6>
+                            <h6 class="mb-2">C</h6>
                             <span>75%</span>
                         </div>
                         <div class="progress">
-                            <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75" aria-valuemin="0" aria-valuemax="100"></div>
+                            <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="75"
+                                aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+
+
+                    <div class="skill-item mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h6 class="mb-2">C++</h6>
+                            <span>75%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 75%;" aria-valuenow="25"
+                                aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+
+
+                    <div class="skill-item mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h6 class="mb-2">React</h6>
+                            <span>65%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 65%;" aria-valuenow="65"
+                                aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+
+
+                    <div class="skill-item mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h6 class="mb-2">Java</h6>
+                            <span>60%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 60%;" aria-valuenow="25"
+                                aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+
+
+                    <div class="skill-item mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h6 class="mb-2">Node.js/Express</h6>
+                            <span>50%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="80"
+                                aria-valuemin="0" aria-valuemax="100"></div>
+                        </div>
+                    </div>
+
+
+                    <div class="skill-item mb-4">
+                        <div class="d-flex justify-content-between">
+                            <h6 class="mb-2">Python/Django</h6>
+                            <span>40%</span>
+                        </div>
+                        <div class="progress">
+                            <div class="progress-bar" role="progressbar" style="width: 40%;" aria-valuenow="25"
+                                aria-valuemin="0" aria-valuemax="100"></div>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Soft Skills & Other -->
                 <div class="col-md-6">
                     <h3 class="mb-4">Soft Skills & Tools</h3>
-                    
+
                     <div class="row">
                         <div class="col-md-6">
                             <div class="soft-skills">
@@ -338,38 +448,45 @@
                                 </ul>
                             </div>
                         </div>
-                        
+
                         <div class="col-md-6">
                             <div class="tools">
                                 <h5>Tools & Technologies</h5>
                                 <ul class="list-unstyled skill-list">
                                     <li><i class="fas fa-check-circle"></i> Git/GitHub</li>
-                                    <li><i class="fas fa-check-circle"></i> Docker</li>
-                                    <li><i class="fas fa-check-circle"></i> AWS/Azure</li>
-                                    <li><i class="fas fa-check-circle"></i> MongoDB/SQL</li>
-                                    <li><i class="fas fa-check-circle"></i> CI/CD Pipelines</li>
-                                    <li><i class="fas fa-check-circle"></i> Agile/Scrum</li>
+                                    <li><i class="fas fa-check-circle"></i> VS Code</li>
+                                    <li><i class="fas fa-check-circle"></i> Eclipse</li>
+                                    <li><i class="fas fa-check-circle"></i> XAMPP</li>
+                                    <li><i class="fas fa-check-circle"></i> Linux (Kali/Ubuntu)</li>
+                                    <li><i class="fas fa-check-circle"></i> VirtualBox</li>
                                 </ul>
                             </div>
                         </div>
                     </div>
-                    
+
                     <div class="language-skills mt-4">
-                        <h5>Languages</h5>
+                        <h5>Additional</h5>
                         <div class="row">
                             <div class="col-6">
                                 <div class="language-item">
-                                    <p>English <span class="float-end">Native</span></p>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: 100%;" aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                    <!-- Hindi -->
+                                    <div class="d-flex align-items-center mb-3">
+                                        <span class="me-2" style="width: 80px;">Hindi (Native)</span>
+                                        <!-- <span style="width: 80px;" class="text-end">(Native)</span> -->
+                                        <div class="progress flex-grow-1 mx-2" style="height: 8px;">
+                                            <div class="progress-bar" role="progressbar" style="width: 100%;"
+                                                aria-valuenow="100" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
                                     </div>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="language-item">
-                                    <p>Spanish <span class="float-end">Intermediate</span></p>
-                                    <div class="progress">
-                                        <div class="progress-bar" role="progressbar" style="width: 70%;" aria-valuenow="70" aria-valuemin="0" aria-valuemax="100"></div>
+
+                                    <!-- English -->
+                                    <div class="d-flex align-items-center mb-3">
+                                        <span class="me-2" style="width: 80px;">English (Proficient)</span>
+                                        <!-- <span style="width: 80px;" class="text-end">(Proficient)</span> -->
+                                        <div class="progress flex-grow-1 mx-2" style="height: 8px;">
+                                            <div class="progress-bar" role="progressbar" style="width: 100%;"
+                                                aria-valuenow="85" aria-valuemin="0" aria-valuemax="100"></div>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -378,118 +495,7 @@
                 </div>
             </div>
         </div>
-    </section>
-
-    <!-- GitHub Integration Section -->
-    <section id="github" class="py-5 github-section">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center mb-5">
-                    <h2 class="section-title text-white">GitHub Profile</h2>
-                    <div class="section-divider"></div>
-                    <p class="lead text-white mb-5">Explore my open source contributions and coding projects</p>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-4 mb-4">
-                    <div class="github-stats-card h-100">
-                        <div class="github-profile">
-                            <img src="https://github.githubassets.com/assets/GitHub-Mark-ea2971cee799.png" alt="GitHub Avatar" class="github-avatar">
-                            <div class="github-info">
-                                <h3>John Doe</h3>
-                                <p class="text-muted">@johndoe</p>
-                            </div>
-                        </div>
-                        <div class="github-stats">
-                            <div class="github-stat-item">
-                                <span class="github-stat-value">12</span>
-                                <span class="github-stat-label">Repositories</span>
-                            </div>
-                            <div class="github-stat-item">
-                                <span class="github-stat-value">45</span>
-                                <span class="github-stat-label">Stars</span>
-                            </div>
-                            <div class="github-stat-item">
-                                <span class="github-stat-value">28</span>
-                                <span class="github-stat-label">Forks</span>
-                            </div>
-                        </div>
-                        <a href="https://github.com/yourusername" target="_blank" class="btn btn-primary mt-3 w-100">
-                            <i class="fab fa-github me-2"></i>Visit Profile
-                        </a>
-                    </div>
-                </div>
-                <div class="col-lg-8">
-                    <div class="github-stats-card">
-                        <h4 class="mb-4">Featured Repositories</h4>
-                        <div class="row">
-                            <div class="col-md-6 mb-3">
-                                <div class="card h-100 p-3">
-                                    <h5>
-                                        <i class="fas fa-code-branch me-2 text-primary"></i>
-                                        e-commerce-platform
-                                    </h5>
-                                    <p class="small text-muted mb-3">A full-stack e-commerce platform built with React and Node.js</p>
-                                    <div class="d-flex mb-3">
-                                        <span class="repo-tag">React</span>
-                                        <span class="repo-tag">Node.js</span>
-                                        <span class="repo-tag">MongoDB</span>
-                                    </div>
-                                    <div class="d-flex justify-content-between">
-                                        <small><i class="fas fa-star me-1"></i> 18 stars</small>
-                                        <a href="#" class="text-primary">View</a>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6 mb-3">
-                                <div class="card h-100 p-3">
-                                    <h5>
-                                        <i class="fas fa-code-branch me-2 text-primary"></i>
-                                        task-manager-app
-                                    </h5>
-                                    <p class="small text-muted mb-3">Task management application with real-time updates</p>
-                                    <div class="d-flex mb-3">
-                                        <span class="repo-tag">Vue.js</span>
-                                        <span class="repo-tag">Firebase</span>
-                                    </div>
-                                    <div class="d-flex justify-content-between">
-                                        <small><i class="fas fa-star me-1"></i> 12 stars</small>
-                                        <a href="#" class="text-primary">View</a>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <h4 class="mt-4 mb-3">Recent Activity</h4>
-                        <div class="github-activity">
-                            <div class="github-activity-icon">
-                                <i class="fas fa-code-commit"></i>
-                            </div>
-                            <div class="github-activity-details">
-                                <p class="mb-1">Pushed 5 commits to <strong>e-commerce-platform</strong></p>
-                                <span class="github-activity-time">2 days ago</span>
-                            </div>
-                        </div>
-                        <div class="github-activity">
-                            <div class="github-activity-icon">
-                                <i class="fas fa-code-branch"></i>
-                            </div>
-                            <div class="github-activity-details">
-                                <p class="mb-1">Created a new repository <strong>portfolio-website</strong></p>
-                                <span class="github-activity-time">1 week ago</span>
-                            </div>
-                        </div>
-                        <div class="github-activity">
-                            <div class="github-activity-icon">
-                                <i class="fas fa-star"></i>
-                            </div>
-                            <div class="github-activity-details">
-                                <p class="mb-1">Starred <strong>react-native-animations</strong></p>
-                                <span class="github-activity-time">2 weeks ago</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
+        </div>
         </div>
     </section>
 
@@ -507,160 +513,190 @@
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="card project-card h-100">
                         <div class="card-img-top">
-                            <!-- SVG placeholder for project image -->
-                            <svg width="100%" height="200" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="100%" height="200" fill="#2A2D3E"/>
-                                <text x="50%" y="50%" font-size="20" text-anchor="middle" fill="#ffffff" dy=".3em">Project Image</text>
-                            </svg>
+                            <!-- IMG placeholder for project image -->
+                            <!-- IMG with actual image -->
+                            <img src="{{ url_for('static', filename='photo1.png') }}" class="card-img-top"
+                                alt="Project Screenshot" style="height: 200px; object-fit: cover;">
+
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">E-Commerce Platform</h5>
-                            <p class="card-text">A fully-featured e-commerce platform with payment integration, user authentication, and product management.</p>
+                            <h5 class="card-title">Web Vulnerability Scanner</h5>
+                            <p class="card-text" style="text-align: justify;">Developed a web application to scan
+                                websites for OWASP Top 10 vulnerabilities, offering features like theme selection, scan
+                                depth settings, real-time updates, categorized reports, and downloadable TXT/DOC formats
+                                for efficient analysis.</p>
                             <div class="tech-stack">
-                                <span class="badge bg-primary">React</span>
-                                <span class="badge bg-secondary">Node.js</span>
-                                <span class="badge bg-success">MongoDB</span>
-                                <span class="badge bg-info">Redux</span>
+                                <span class="badge bg-primary">Python</span>
+                                <span class="badge bg-secondary">Streamlit</span>
+                                <span class="badge bg-success">Plotly</span>
+                                <span class="badge bg-info">Pandas</span>
+                                <span class="badge bg-primary">BeautifulSoup </span>
                             </div>
                         </div>
                         <div class="card-footer d-flex justify-content-between">
-                            <a href="#" class="btn btn-outline-primary btn-sm"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                            <a href="#" class="btn btn-outline-secondary btn-sm"><i class="fab fa-github"></i> Source Code</a>
+                            <a href="#" class="btn btn-outline-primary btn-sm"><i class="fas fa-external-link-alt"></i>
+                                Live Demo</a>
+                            <a href="https://github.com/aryan-khatri/Gym-Website"
+                                class="btn btn-outline-secondary btn-sm"><i class="fab fa-github"></i> Source
+                                Code</a>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Project 2 -->
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="card project-card h-100">
                         <div class="card-img-top">
                             <!-- SVG placeholder for project image -->
-                            <svg width="100%" height="200" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="100%" height="200" fill="#2A2D3E"/>
-                                <text x="50%" y="50%" font-size="20" text-anchor="middle" fill="#ffffff" dy=".3em">Project Image</text>
-                            </svg>
+                            <img src="{{ url_for('static', filename='photo2.png') }}" class="card-img-top"
+                                alt="Project Screenshot" style="height: 200px; object-fit: cover;">
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">Task Management App</h5>
-                            <p class="card-text">A productivity application that helps users organize tasks, set deadlines, and track progress.</p>
+                            <h5 class="card-title">Gym Website</h5>
+                            <p class="card-text" style="text-align: justify;">Implemented and developed a responsive gym
+                                website to enhance online
+                                presence and improve customer engagement. Integrated
+                                contact forms and location maps to streamline inquiries and improve accessibility for
+                                potential clients</p>
                             <div class="tech-stack">
-                                <span class="badge bg-primary">Angular</span>
-                                <span class="badge bg-secondary">Express</span>
-                                <span class="badge bg-success">PostgreSQL</span>
-                                <span class="badge bg-info">TypeScript</span>
-                            </div>
-                        </div>
-                        <div class="card-footer d-flex justify-content-between">
-                            <a href="#" class="btn btn-outline-primary btn-sm"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                            <a href="#" class="btn btn-outline-secondary btn-sm"><i class="fab fa-github"></i> Source Code</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 3 -->
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="card project-card h-100">
-                        <div class="card-img-top">
-                            <!-- SVG placeholder for project image -->
-                            <svg width="100%" height="200" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="100%" height="200" fill="#2A2D3E"/>
-                                <text x="50%" y="50%" font-size="20" text-anchor="middle" fill="#ffffff" dy=".3em">Project Image</text>
-                            </svg>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Weather Dashboard</h5>
-                            <p class="card-text">A real-time weather application that provides current conditions and forecasts for locations worldwide.</p>
-                            <div class="tech-stack">
-                                <span class="badge bg-primary">JavaScript</span>
-                                <span class="badge bg-secondary">HTML/CSS</span>
-                                <span class="badge bg-success">Weather API</span>
-                                <span class="badge bg-info">Chart.js</span>
-                            </div>
-                        </div>
-                        <div class="card-footer d-flex justify-content-between">
-                            <a href="#" class="btn btn-outline-primary btn-sm"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                            <a href="#" class="btn btn-outline-secondary btn-sm"><i class="fab fa-github"></i> Source Code</a>
-                        </div>
-                    </div>
-                </div>
-                
-                <!-- Project 4 -->
-                <div class="col-md-6 col-lg-4 mb-4">
-                    <div class="card project-card h-100">
-                        <div class="card-img-top">
-                            <!-- SVG placeholder for project image -->
-                            <svg width="100%" height="200" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="100%" height="200" fill="#2A2D3E"/>
-                                <text x="50%" y="50%" font-size="20" text-anchor="middle" fill="#ffffff" dy=".3em">Project Image</text>
-                            </svg>
-                        </div>
-                        <div class="card-body">
-                            <h5 class="card-title">Portfolio Website</h5>
-                            <p class="card-text">A responsive personal portfolio website designed to showcase professional skills and projects.</p>
-                            <div class="tech-stack">
-                                <span class="badge bg-primary">HTML5</span>
-                                <span class="badge bg-secondary">CSS3</span>
+                                <span class="badge bg-primary">HTML</span>
+                                <span class="badge bg-secondary">CSS</span>
                                 <span class="badge bg-success">JavaScript</span>
                                 <span class="badge bg-info">Bootstrap</span>
                             </div>
                         </div>
                         <div class="card-footer d-flex justify-content-between">
-                            <a href="#" class="btn btn-outline-primary btn-sm"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                            <a href="#" class="btn btn-outline-secondary btn-sm"><i class="fab fa-github"></i> Source Code</a>
+                            <a href="#" class="btn btn-outline-primary btn-sm"><i class="fas fa-external-link-alt"></i>
+                                Live Demo</a>
+                            <a href="https://github.com/aryan-khatri/Automated-Web-Vulnerability-Scanner"
+                                class="btn btn-outline-secondary btn-sm"><i class="fab fa-github"></i> Source
+                                Code</a>
                         </div>
                     </div>
                 </div>
-                
+
+                <!-- Project 3 -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card project-card h-100">
+                        <div class="card-img-top">
+                            <!-- SVG placeholder for project image -->
+                            <img src="{{ url_for('static', filename='photo3.png') }}" class="card-img-top"
+                                alt="Project Screenshot" style="height: 200px; object-fit: cover;">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Hospital Bed Management System</h5>
+                            <p class="card-text" style="text-align: justify;">Developed a hospital bed management system
+                                to streamline administrative
+                                workﬂows and enhance patient care.Implemented modules for real-time patient record
+                                handling, appointment scheduling, and administrative task automation.</p>
+                            <div class="tech-stack">
+                                <span class="badge bg-primary">JavaScript</span>
+                                <span class="badge bg-secondary">HTML</span>
+                                <span class="badge bg-success">CSS</span>
+                                <span class="badge bg-info">React.js</span>
+                            </div>
+                        </div>
+                        <div class="card-footer d-flex justify-content-between">
+                            <a href="#" class="btn btn-outline-primary btn-sm"><i class="fas fa-external-link-alt"></i>
+                                Live Demo</a>
+                            <a href="#" class="btn btn-outline-secondary btn-sm"><i class="fab fa-github"></i> Source
+                                Code</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card project-card h-100">
+                        <div class="card-img-top">
+                            <!-- SVG placeholder for project image -->
+                            <img src="{{ url_for('static', filename='photo4.png') }}" class="card-img-top"
+                                alt="Project Screenshot" style="height: 200px; object-fit: cover;">
+                        </div>
+                        <div class="card-body">
+                            <h5 class="card-title">Portfolio Website</h5>
+                            <p class="card-text" style="text-align: justify;">
+                                A fully responsive personal portfolio website built using Python (Flask), HTML, CSS, and
+                                JavaScript.
+                                Designed to showcase technical skills, professional experience, and project work in a
+                                clean, modern layout.
+                                Includes interactive features, live demos, and source code links for each highlighted
+                                project.
+                            </p>
+                            <div class="tech-stack">
+                                <span class="badge bg-primary">HTML5</span>
+                                <span class="badge bg-secondary">CSS3</span>
+                                <span class="badge bg-success">JavaScript</span>
+                                <span class="badge bg-info">Bootstrap</span>
+                                <span class="badge bg-secondary">Python</span>
+                            </div>
+                        </div>
+                        <div class="card-footer d-flex justify-content-between">
+                            <a href="#" class="btn btn-outline-primary btn-sm"><i class="fas fa-external-link-alt"></i>
+                                Live Demo</a>
+                            <a href="#" class="btn btn-outline-secondary btn-sm"><i class="fab fa-github"></i> Source
+                                Code</a>
+                        </div>
+                    </div>
+                </div>
+
                 <!-- Project 5 -->
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="card project-card h-100">
                         <div class="card-img-top">
                             <!-- SVG placeholder for project image -->
-                            <svg width="100%" height="200" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="100%" height="200" fill="#2A2D3E"/>
-                                <text x="50%" y="50%" font-size="20" text-anchor="middle" fill="#ffffff" dy=".3em">Project Image</text>
-                            </svg>
+                            <img src="{{ url_for('static', filename='photo5.png') }}" class="card-img-top"
+                                alt="Project Screenshot" style="height: 200px; object-fit: cover;">
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">Fitness Tracker</h5>
-                            <p class="card-text">An application that helps users track workouts, monitor progress, and set fitness goals.</p>
+                            <h5 class="card-title">Food Website</h5>
+                            <p class="card-text" style="text-align: justify;">This website focuses on streamlining food
+                                delivery services. It allows users to input delivery details, including name, address,
+                                contact number, and city, through an intuitive form.</p>
                             <div class="tech-stack">
-                                <span class="badge bg-primary">React Native</span>
-                                <span class="badge bg-secondary">Firebase</span>
-                                <span class="badge bg-success">Redux</span>
-                                <span class="badge bg-info">D3.js</span>
+                                <span class="badge bg-primary">HTML</span>
+                                <span class="badge bg-secondary">CSS</span>
+                                <span class="badge bg-success">JavaScript</span>
+                                <!-- <span class="badge bg-info">D3.js</span> -->
                             </div>
                         </div>
                         <div class="card-footer d-flex justify-content-between">
-                            <a href="#" class="btn btn-outline-primary btn-sm"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                            <a href="#" class="btn btn-outline-secondary btn-sm"><i class="fab fa-github"></i> Source Code</a>
+                            <a href="#" class="btn btn-outline-primary btn-sm"><i class="fas fa-external-link-alt"></i>
+                                Live Demo</a>
+                            <a href="https://github.com/aryan-khatri/Food-Delivery-Website"
+                                class="btn btn-outline-secondary btn-sm"><i class="fab fa-github"></i> Source
+                                Code</a>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Project 6 -->
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="card project-card h-100">
                         <div class="card-img-top">
                             <!-- SVG placeholder for project image -->
-                            <svg width="100%" height="200" xmlns="http://www.w3.org/2000/svg">
-                                <rect width="100%" height="200" fill="#2A2D3E"/>
-                                <text x="50%" y="50%" font-size="20" text-anchor="middle" fill="#ffffff" dy=".3em">Project Image</text>
-                            </svg>
+                            <img src="{{ url_for('static', filename='photo6.png') }}" class="card-img-top"
+                                alt="Project Screenshot" style="height: 200px; object-fit: cover;">
                         </div>
                         <div class="card-body">
-                            <h5 class="card-title">Chat Application</h5>
-                            <p class="card-text">A real-time chat application supporting group conversations, direct messaging, and file sharing.</p>
+                            <h5 class="card-title">AI Chat Application</h5>
+                            <p class="card-text" style="text-align: justify;">An AI-powered application that transforms
+                                text prompts into detailed
+                                images.
+                                Utilizes advanced deep learning models to generate high-quality visual content.
+                                Ideal for creative design, concept art, and visual storytelling.</p>
                             <div class="tech-stack">
-                                <span class="badge bg-primary">Socket.io</span>
-                                <span class="badge bg-secondary">Vue.js</span>
-                                <span class="badge bg-success">Node.js</span>
-                                <span class="badge bg-info">MongoDB</span>
+                                <span class="badge bg-primary">OpenAI API/TensorFlow</span>
+                                <span class="badge bg-secondary">HTML/CSS</span>
+                                <span class="badge bg-success">JavaScript</span>
+                                <span class="badge bg-info">Bootstrap</span>
                             </div>
                         </div>
                         <div class="card-footer d-flex justify-content-between">
-                            <a href="#" class="btn btn-outline-primary btn-sm"><i class="fas fa-external-link-alt"></i> Live Demo</a>
-                            <a href="#" class="btn btn-outline-secondary btn-sm"><i class="fab fa-github"></i> Source Code</a>
+                            <a href="#" class="btn btn-outline-primary btn-sm"><i class="fas fa-external-link-alt"></i>
+                                Live Demo</a>
+                            <a href="#" class="btn btn-outline-secondary btn-sm"><i class="fab fa-github"></i> Source
+                                Code</a>
                         </div>
                     </div>
                 </div>
@@ -686,14 +722,15 @@
                             <div class="cert-icon">
                                 <i class="fas fa-certificate"></i>
                             </div>
-                            <h5 class="card-title">AWS Certified Solutions Architect</h5>
-                            <p class="card-text">Amazon Web Services</p>
-                            <p class="card-text"><small class="text-muted">Issued: January 2022</small></p>
-                            <a href="#" class="btn btn-sm btn-outline-primary">View Certificate</a>
+                            <h5 class="card-title">Cyber Security Analyst</h5>
+                            <p class="card-text">IBM</p>
+                            <p class="card-text"><small class="text-muted">Issued: April 2025</small></p>
+                            <a href="https://courses.ibmcep.cognitiveclass.ai/certificates/fbdba3c841e74b8287dee891dc4122f2"
+                                class="btn btn-sm btn-outline-primary">View Certificate</a>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Certification 2 -->
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="card certification-card h-100">
@@ -701,14 +738,15 @@
                             <div class="cert-icon">
                                 <i class="fas fa-certificate"></i>
                             </div>
-                            <h5 class="card-title">Full Stack Web Developer</h5>
-                            <p class="card-text">Udacity</p>
-                            <p class="card-text"><small class="text-muted">Issued: March 2021</small></p>
-                            <a href="#" class="btn btn-sm btn-outline-primary">View Certificate</a>
+                            <h5 class="card-title">Full-Stack Web Development</h5>
+                            <p class="card-text">Prodigy</p>
+                            <p class="card-text"><small class="text-muted">Issued: January 2025</small></p>
+                            <a href="https://prodigyinfotech.dev/verify?cin=PIT/DEC24/20084"
+                                class="btn btn-sm btn-outline-primary">View Certificate</a>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Certification 3 -->
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="card certification-card h-100">
@@ -716,14 +754,15 @@
                             <div class="cert-icon">
                                 <i class="fas fa-certificate"></i>
                             </div>
-                            <h5 class="card-title">Certified Scrum Master</h5>
-                            <p class="card-text">Scrum Alliance</p>
+                            <h5 class="card-title">Blockchain and its Applications</h5>
+                            <p class="card-text">NPTEL</p>
                             <p class="card-text"><small class="text-muted">Issued: June 2020</small></p>
-                            <a href="#" class="btn btn-sm btn-outline-primary">View Certificate</a>
+                            <a href="https://archive.nptel.ac.in/content/noc/NOC24/SEM1/Ecertificates/106/noc24-cs15/Course/NPTEL24CS15S105760076930415506.pdf"
+                                class="btn btn-sm btn-outline-primary">View Certificate</a>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Certification 4 -->
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="card certification-card h-100">
@@ -731,14 +770,15 @@
                             <div class="cert-icon">
                                 <i class="fas fa-certificate"></i>
                             </div>
-                            <h5 class="card-title">Google Cloud Professional</h5>
-                            <p class="card-text">Google</p>
-                            <p class="card-text"><small class="text-muted">Issued: September 2021</small></p>
-                            <a href="#" class="btn btn-sm btn-outline-primary">View Certificate</a>
+                            <h5 class="card-title">Cybersecurity Skilling Program 2023</h5>
+                            <p class="card-text">C3iHub, IIT Kanpur</p>
+                            <p class="card-text"><small class="text-muted">Issued: September 2023</small></p>
+                            <a href="https://verify.c3ihub.digitalcredentials.in/161b76ad-7b3c-43b0-b9ab-0c1a697bac36"
+                                class="btn btn-sm btn-outline-primary">View Certificate</a>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Certification 5 -->
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="card certification-card h-100">
@@ -746,14 +786,15 @@
                             <div class="cert-icon">
                                 <i class="fas fa-certificate"></i>
                             </div>
-                            <h5 class="card-title">React Development</h5>
-                            <p class="card-text">Udemy</p>
-                            <p class="card-text"><small class="text-muted">Issued: May 2019</small></p>
-                            <a href="#" class="btn btn-sm btn-outline-primary">View Certificate</a>
+                            <h5 class="card-title">Introduction to Cyber Security</h5>
+                            <p class="card-text">Cisco Networking Academy</p>
+                            <p class="card-text"><small class="text-muted">Issued: June 2023</small></p>
+                            <a href="https://www.credly.com/badges/30e49ee2-12e8-4524-9759-d189b1d25daf/print"
+                                class="btn btn-sm btn-outline-primary">View Certificate</a>
                         </div>
                     </div>
                 </div>
-                
+
                 <!-- Certification 6 -->
                 <div class="col-md-6 col-lg-4 mb-4">
                     <div class="card certification-card h-100">
@@ -761,10 +802,56 @@
                             <div class="cert-icon">
                                 <i class="fas fa-certificate"></i>
                             </div>
-                            <h5 class="card-title">Python for Data Science</h5>
-                            <p class="card-text">DataCamp</p>
-                            <p class="card-text"><small class="text-muted">Issued: December 2020</small></p>
-                            <a href="#" class="btn btn-sm btn-outline-primary">View Certificate</a>
+                            <h5 class="card-title">Introduction to C++ Programming and Unreal</h5>
+                            <p class="card-text">Coursera</p>
+                            <p class="card-text"><small class="text-muted">Issued: March 2023</small></p>
+                            <a href="https://drive.google.com/file/d/1oXY-vyO3Z0nSFW_BGCBOG7vJ_WC0QW7u/view?usp=share_link"
+                                class="btn btn-sm btn-outline-primary">View Certificate</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Certification 7 -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card certification-card h-100">
+                        <div class="card-body">
+                            <div class="cert-icon">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <h5 class="card-title"> C for Everyone: Programming Fundamentals</h5>
+                            <p class="card-text">Coursera</p>
+                            <p class="card-text"><small class="text-muted">Issued: February 2023</small></p>
+                            <a href="https://drive.google.com/file/d/1-ZsFEW0sfI6vtZKXyIAwZ4NPm-W_iK-q/view?usp=share_link"
+                                class="btn btn-sm btn-outline-primary">View Certificate</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Certification 8 -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card certification-card h-100">
+                        <div class="card-body">
+                            <div class="cert-icon">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <h5 class="card-title">Intro to SQL</h5>
+                            <p class="card-text">Kaggle</p>
+                            <p class="card-text"><small class="text-muted">Issued: February 2023</small></p>
+                            <a href="https://www.kaggle.com/learn/certification/aryan21mei10004/intro-to-sql"
+                                class="btn btn-sm btn-outline-primary">View Certificate</a>
+                        </div>
+                    </div>
+                </div>
+                <!-- Certification 9 -->
+                <div class="col-md-6 col-lg-4 mb-4">
+                    <div class="card certification-card h-100">
+                        <div class="card-body">
+                            <div class="cert-icon">
+                                <i class="fas fa-certificate"></i>
+                            </div>
+                            <h5 class="card-title">The Bits and Bytes of Computer Networking</h5>
+                            <p class="card-text">Coursera</p>
+                            <p class="card-text"><small class="text-muted">Issued: December 2022</small></p>
+                            <a href="https://drive.google.com/file/d/1oXY-vyO3Z0nSFW_BGCBOG7vJ_WC0QW7u/view?usp=share_link"
+                                class="btn btn-sm btn-outline-primary">View Certificate</a>
                         </div>
                     </div>
                 </div>
@@ -790,54 +877,63 @@
                                 <div class="col-md-6 mb-4 mb-md-0">
                                     <div class="contact-info">
                                         <h4>Contact Information</h4>
-                                        <p>I'm open for freelance opportunities and collaborations. Feel free to reach out if you have any questions.</p>
-                                        
+                                        <p style="text-align: justify;">I'm open for freelance opportunities and
+                                            collaborations. Feel free to reach
+                                            out if you have any questions.</p>
+
                                         <div class="contact-item">
                                             <i class="fas fa-map-marker-alt"></i>
-                                            <span>City, Country</span>
+                                            <span>Indore, India</span>
                                         </div>
-                                        
+
                                         <div class="contact-item">
                                             <i class="fas fa-envelope"></i>
-                                            <span>your.email@example.com</span>
+                                            <span>aryankhatik721@gmail.com</span>
                                         </div>
-                                        
+
                                         <div class="contact-item">
                                             <i class="fas fa-phone"></i>
-                                            <span>+1 234 567 890</span>
+                                            <span>+91 9301382870</span>
                                         </div>
-                                        
+
                                         <div class="social-links mt-4">
-                                            <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
-                                            <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
-                                            <a href="#" class="social-icon"><i class="fab fa-twitter"></i></a>
-                                            <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+                                            <a href="https://github.com/aryan-khatri" class="social-icon"><i
+                                                    class="fab fa-github"></i></a>
+                                            <a href="https://www.linkedin.com/in/aryan-khatri-8587b3251/"
+                                                class="social-icon"><i class="fab fa-linkedin"></i></a>
+                                            <a href="https://x.com/aryankhatri721?s=21" class="social-icon"><i
+                                                    class="fab fa-twitter"></i></a>
+                                            <a href="https://www.instagram.com/aryankhatri722?igsh=cnN0d2prMjk3dXln&utm_source=qr"
+                                                class="social-icon"><i class="fab fa-instagram"></i></a>
                                         </div>
                                     </div>
                                 </div>
-                                
+
                                 <div class="col-md-6">
                                     <form id="contactForm">
                                         <div class="mb-3">
                                             <label for="name" class="form-label">Name</label>
-                                            <input type="text" class="form-control" id="name" placeholder="Your Name" required>
+                                            <input type="text" class="form-control" id="name" placeholder="Your Name"
+                                                required>
                                         </div>
-                                        
+
                                         <div class="mb-3">
                                             <label for="email" class="form-label">Email</label>
-                                            <input type="email" class="form-control" id="email" placeholder="Your Email" required>
+                                            <input type="email" class="form-control" id="email" placeholder="Your Email"
+                                                required>
                                         </div>
-                                        
+
                                         <div class="mb-3">
                                             <label for="subject" class="form-label">Subject</label>
                                             <input type="text" class="form-control" id="subject" placeholder="Subject">
                                         </div>
-                                        
+
                                         <div class="mb-3">
                                             <label for="message" class="form-label">Message</label>
-                                            <textarea class="form-control" id="message" rows="4" placeholder="Your Message" required></textarea>
+                                            <textarea class="form-control" id="message" rows="4"
+                                                placeholder="Your Message" required></textarea>
                                         </div>
-                                        
+
                                         <button type="submit" class="btn btn-primary w-100">Send Message</button>
                                     </form>
                                 </div>
@@ -854,12 +950,15 @@
         <div class="container">
             <div class="row">
                 <div class="col-lg-12 text-center">
-                    <p>&copy; <span id="currentYear"></span> Your Name. All Rights Reserved.</p>
+                    <p>&copy; <span id="currentYear"></span> Aryan Khatri, All Rights Reserved.</p>
                     <div class="footer-links">
-                        <a href="#" class="text-white me-3"><i class="fab fa-github"></i></a>
-                        <a href="#" class="text-white me-3"><i class="fab fa-linkedin"></i></a>
-                        <a href="#" class="text-white me-3"><i class="fab fa-twitter"></i></a>
-                        <a href="#" class="text-white"><i class="fab fa-instagram"></i></a>
+                        <a href="https://github.com/aryan-khatri" class="social-icon"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/aryan-khatri-8587b3251/" class="social-icon"><i
+                                class="fab fa-linkedin"></i></a>
+                        <a href="https://x.com/aryankhatri721?s=21" class="social-icon"><i
+                                class="fab fa-twitter"></i></a>
+                        <a href="https://www.instagram.com/aryankhatri722?igsh=cnN0d2prMjk3dXln&utm_source=qr"
+                            class="social-icon"><i class="fab fa-instagram"></i></a>
                     </div>
                 </div>
             </div>
@@ -877,4 +976,5 @@
     <script src="{{ url_for('static', filename='js/main.js') }}"></script>
     <script src="{{ url_for('static', filename='js/smooth-scroll.js') }}"></script>
 </body>
+
 </html>
