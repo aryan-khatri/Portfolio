@@ -92,6 +92,11 @@ This project is open-source and available under the [MIT License](LICENSE).
 Full Stack Intern @ Prodigy (Dec 2024 – Jan 2025)
  [Contact](mailto:aryankhatik721@gmail.com) |  [LinkedIn](https://www.linkedin.com/in/aryan-khatri-8587b3251/)
 
+ ## Number Of visitor 
+<p align="center">
+  <img src="https://profile-counter.glitch.me/aryan-khatri/count.svg" />
+</p>
+
 ---
 
 > Feel free to fork, contribute, and customize this project to suit your needs!
